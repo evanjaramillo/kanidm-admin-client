@@ -1,0 +1,48 @@
+{
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build",
+    "devPath": "http://localhost:1420",
+    "distDir": "../dist"
+  },
+  "package": {
+    "productName": "kanidm-admin-client",
+    "version": "0.1.0"
+  },
+  "tauri": {
+    "allowlist": {
+      "all": false,
+      "shell": {
+        "all": false,
+        "open": true
+      }
+    },
+    "windows": [
+      {
+        "title": "Kanidm Admin Client",
+        "width": 800,
+        "height": 600,
+        "visible": false
+      },
+      {
+        "width": 400,
+        "height": 300,
+        "url": "loginwindow.html",
+        "label": "login-window",
+        "decorations": true,
+        "title": "Authenticate"
+      }
+    ],
+    "security": {
+      "csp": null
+    },
+    "bundle": {
+      "active": true,
+      "targets": "all",
+      "identifier": "org.github.evanjaramillo.kanidm-admin-client.app",
+      "icon": [
+        "icons/32x32.png"
+      ]
+    }
+  }
+}
